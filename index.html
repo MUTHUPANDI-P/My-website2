@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆Annual Day Student Awards🏆 - Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>🏆Annual Day Student Awards🏆 - Application Form</h2>
+
+        <!-- Success message section (initially hidden) -->
+        <div id="successMessage" style="display: none; text-align: center;">
+            <img src="tick-icon1.jpg" alt="Success" style="width: 100px; height: 100px;">
+            <h2>Your application form is submitted successfully</h2>
+        </div>
+
+        <form id="studentForm">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+            <span class="validation-hint">Name should start with a capital letter, followed by lowercase letters, space, and end with initials.</span>
+
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" name="studentId" required>
+            <span class="validation-hint">Student ID must be 5 to 6 numeric digits.</span>
+
+            <label for="registerNo">Register No:</label>
+            <input type="text" id="registerNo" name="registerNo" required>
+            <span class="validation-hint">Register No must be exactly 12 digits.</span>
+
+            <label for="rollNo">Roll No:</label>
+            <input type="text" id="rollNo" name="rollNo" required>
+            <span class="validation-hint">Roll No must be exactly 7 characters long with any combination of letters and digits (e.g., 22AD028).</span>
+
+            <label for="yearOfStudy">Year of Study:</label>
+            <select id="yearOfStudy" name="yearOfStudy" required>
+                <option value="" disabled selected>Select Year</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+            </select>
+            <small class="validation-hint">Select your year of study.</small>
+
+            <label for="academicYear">Academic Year:</label>
+            <input type="text" id="academicYear" name="academicYear" required>
+            <small class="validation-hint">Enter the academic year (e.g., 2023-2024).</small>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="" disabled selected>Select your department</option>
+                <option value="AI & DS">AI & DS</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="CIVIL">CIVIL</option>
+                <option value="MECH">MECH</option>
+                <option value="CSBS">CSBS</option>
+            </select>
+            <small class="validation-hint">Select your department from the list.</small>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob" required>
+            <span class="validation-hint">Date of Birth must be in DD/MM/YYYY format.</span>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="^\+91\d{10}$" required>
+            <small class="validation-hint">Enter your phone number starting with +91 followed by 10 digits.</small>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="validation-hint">Email must contain "@" and a valid domain (e.g., example@domain.com).</span>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <small class="validation-hint">Select your gender.</small>
+
+            <label for="awardsCategory">Awards Category:</label>
+            <select id="awardsCategory" name="awardsCategory" required>
+                <option value="">Select Award Category</option>
+                <option value="overallBestOutgoingStudent">Overall Best Outgoing Student</option>
+                <option value="bestOutgoingStudentEachProgramme">Best Outgoing Student in Each Programme</option>
+                <option value="overallBestStudentCoCurricularExtracurricular">Overall Best Student in Co-Curricular & Extracurricular Activities</option>
+                <option value="bestStudentVolunteer">Best Student Volunteer in Social and Community Service</option>
+                <option value="bestStudentFirstYearEachProgramme">Best Student of First Year in Each Programme</option>
+                <option value="academicTopperAward">Academic Topper Award</option>
+            </select>
+            <small class="validation-hint">Select one award category.</small>
+
+            <label for="class10Percentage">Percentage in Class 10:</label>
+            <input type="number" id="class10Percentage" name="class10Percentage" min="75" max="100" step="0.01" required>
+            <small class="validation-hint">Enter your Class 10 percentage (must be 75% or higher).</small>
+
+            <label for="class12Percentage">Percentage in Class 12:</label>
+            <input type="number" id="class12Percentage" name="class12Percentage" min="75" max="100" step="0.01" required>
+            <small class="validation-hint">Enter your Class 12 percentage (must be 75% or higher).</small>
+
+            <label for="cgpa">CGPA:</label>
+            <input type="number" id="cgpa" name="cgpa" min="7.5" max="10" step="0.01" required>
+            <small class="validation-hint">Enter your CGPA (must be 7.5 or higher).</small>
+
+            <label for="leadershipRoles">Leadership Roles:</label>
+            <input type="checkbox" id="classRep" name="leadershipRoles" value="Class Representative"> Class Representative
+            <input type="checkbox" id="projectLeader" name="leadershipRoles" value="Project Team Leader"> Project Team Leader
+            <input type="checkbox" id="ivCoordinator" name="leadershipRoles" value="IV Coordinator"> IV Coordinator
+            <input type="checkbox" id="no leadershipRoles" name="leadershipRoles" value="No leadershipRoles">No leadershipRoles
+            <small class="validation-hint">Select any leadership roles you have held.</small>
+
+            <label for="nptelCertifications">NPTEL Certifications (Enter the number of certifications):</label>
+            <input type="number" id="nptelCertifications" name="nptelCertifications" min="0" required>
+            <small class="validation-hint">Enter the number of NPTEL certifications you have.</small>
+
+            <label for="seminars">Seminars/Workshops Attended:</label>
+            <input type="radio" id="seminarYes" name="seminars" value="Yes" required> Yes
+            <input type="radio" id="seminarNo" name="seminars" value="No" required> No
+            <small class="validation-hint">Select Yes or No for seminars/workshops attended.</small>
+
+            <label for="participationInQuiz">Participation in Quiz:</label>
+            <input type="radio" id="quizYes" name="quiz" value="Yes" required> Yes
+            <input type="radio" id="quizNo" name="quiz" value="No" required> No
+            <small class="validation-hint">Select Yes or No for participation in quizzes.</small>
+
+            <label for="extracurricularActivities">Extracurricular Activities:</label>
+            <input type="text" id="extracurricularActivities" name="extracurricularActivities">
+            <small class="validation-hint">List some activities you participated in (max 10 words).</small>
+
+            <label for="contributionToSociety">Contribution to Society:</label>
+            <textarea id="contributionToSociety" name="contributionToSociety" rows="2"></textarea>
+            <small class="validation-hint">Explain your contribution to society (max 20 words).</small>
+
+            <label for="imageUpload">Upload Your Image (JPG only, max 300KB):</label>
+            <input type="file" id="imageUpload" name="imageUpload" accept=".jpg" required>
+            <small class="validation-hint">Upload your image in JPG format (maximum size 300KB).</small>
+
+            <label for="proofDocuments">Upload Proof Documents (PDF only, max 10MB):</label>
+            <input type="file" id="proofDocuments" name="proofDocuments" accept=".pdf" required>
+            <small class="validation-hint">Upload your proof documents in PDF format (maximum size 10MB).</small>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript validation and success message handling
+
+        const form = document.getElementById('studentForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let isValid = true;
+
+            const studentName = document.getElementById('studentName');
+            const nameRegex = /^[A-Z][a-z]+ [A-Z]$/;
+            if (!nameRegex.test(studentName.value)) {
+                isValid = false;
+                studentName.nextElementSibling.style.display = 'inline';
+            } else {
+                studentName.nextElementSibling.style.display = 'none';
+            }
+
+            const studentId = document.getElementById('studentId');
+            const idRegex = /^\d{5,6}$/;
+            if (!idRegex.test(studentId.value)) {
+                isValid = false;
+                studentId.nextElementSibling.style.display = 'inline';
+            } else {
+                studentId.nextElementSibling.style.display = 'none';
+            }
+
+            const registerNo = document.getElementById('registerNo');
+            const regNoRegex = /^\d{12}$/;
+            if (!regNoRegex.test(registerNo.value)) {
+                isValid = false;
+                registerNo.nextElementSibling.style.display = 'inline';
+            } else {
+                registerNo.nextElementSibling.style.display = 'none';
+            }
+
+            const rollNo = document.getElementById('rollNo');
+            const rollNoRegex = /^[A-Z0-9]{7}$/;
+            if (!rollNoRegex.test(rollNo.value)) {
+                isValid = false;
+                rollNo.nextElementSibling.style.display = 'inline';
+            } else {
+                rollNo.nextElementSibling.style.display = 'none';
+            }
+
+            const academicYear = document.getElementById('academicYear');
+            const yearRegex = /^\d{4}-\d{4}$/;
+            if (!yearRegex.test(academicYear.value)) {
+                isValid = false;
+                academicYear.nextElementSibling.style.display = 'inline';
+            } else {
+                academicYear.nextElementSibling.style.display = 'none';
+            }
+
+            const dob = document.getElementById('dob');
+            const dobRegex = /^\d{2}\/\d{2}\/\d{4}$/;
+            if (!dobRegex.test(dob.value)) {
+                isValid = false;
+                dob.nextElementSibling.style.display = 'inline';
+            } else {
+                dob.nextElementSibling.style.display = 'none';
+            }
+
+            if (isValid) {
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
